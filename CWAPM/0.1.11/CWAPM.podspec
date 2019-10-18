@@ -1,13 +1,18 @@
+
 Pod::Spec.new do |s|
-  s.name = "CWAPM"
+  s.name             = 'CWAPM'
   s.version="0.1.11"
-  s.summary = "APP Performance Monitor"
-  s.license = {"type"=>"MIT", "file"=>"LICENSE"}
-  s.authors = {"JackWchen2015"=>"576734302@qq.com"}
-  s.homepage = "https://github.com/JackWchen2015/CWAPM_framework"
-  s.description = "APP\u{6027}\u{80fd}\u{76d1}\u{63a7}"
-  s.xcconfig = {"OTHER_LDFLAGS"=>"-ObjC"}
-  s.source = { :git => 'https://github.com/JackWchen2015/CWAPM_framework.git', :tag => s.version}
-  s.ios.deployment_target    = '8.0'
-  s.ios.vendored_framework   = 'CWAPM/CWAPM.framework'
+  s.summary          = 'APP Performance Monitor'
+  s.description      = 'APP性能监控'
+  s.homepage         = 'https://github.com/JackWchen2015/CWAPM'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'JackWchen2015' => '576734302@qq.com' }
+  s.source           = { :git => 'https://github.com/JackWchen2015/CWAPM.git', :tag => s.version}
+  s.source_files = 'CWAPM/Classes/**/*.{h,m}'
+  s.ios.deployment_target = '8.0'
+  s.public_header_files ='CWAPM/Classes/**/*.h'
+  s.dependency 'YYDispatchQueuePool'
+  s.dependency 'GPUUtilization'
+  s.dependency 'Masonry'
+  s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 end
